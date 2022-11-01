@@ -14,6 +14,12 @@ def load_csv(filename):
     """Load a Numpy array from a CSV
 
     :param filename: Filename of CSV to load
+    :param data: calculates average of data  
+    :returns average value
+    :param data: calculates maximum of data  
+    :returns max value
+    :param data: calculates minimum of data 
+    :returns min value
     """
     return np.loadtxt(fname=filename, delimiter=',')
 
