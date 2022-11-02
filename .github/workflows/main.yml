@@ -9,7 +9,7 @@ on: push
 #define a single job, build
 
 jobs:
-  build:
+  build:git 
 
   runs-on: ubuntu-latest
 
