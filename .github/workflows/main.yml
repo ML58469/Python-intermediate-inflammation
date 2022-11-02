@@ -9,31 +9,31 @@ on: push
 #define a single job, build
 
 jobs:
-  build:git 
+  build:
 
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  #define our steps 
-  steps: 
+    #define our steps 
+    steps: 
 
-#firstly check out repo 
-    -name: Checkout repository 
-     uses: actions/checkout@v2
+        #firstly check out repo 
+      - name: Checkout repository 
+        uses: actions/checkout@v2
 
-#setup python env 
-    -name: set up python 3.9
-      uses: actions/setup-python@v2
-      with:
-       python-version:3.9
+        #setup python env 
+      - name: set up python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
 
-#install dependancies 
- -name: Install Python Dependencies 
-  run: |
-   python3 -m pip install --upgrade
-   pip3 install -r requirements.txt
-   pip3 install -e .
+        #install dependancies 
+      - name: Install Python Dependencies 
+        run: |
+        python3 -m pip install --upgrade
+        pip3 install -r requirements.txt
+        pip3 install -e .
 
-#run our tests 
-  -name: Test with Pytest
-  run: |
-    pytest tests/test_models.py  
+      #run our tests 
+       - name: Test with Pytest
+          run: |
+            pytest tests/test_models.py  
