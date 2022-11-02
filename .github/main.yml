@@ -8,7 +8,7 @@ on: push
 
 #define a single job, build
 
-job:
+jobs:
   build:
 
   runs-on: ubuntu-latest
