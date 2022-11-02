@@ -5,6 +5,8 @@
 #ignore
 venv/
 
+#ihdfibsjfb
+
 # Intermediate Coverage file
 .coverage
 
@@ -15,3 +17,6 @@ venv/
 *.pyc
 *.egg-info
 .pytest_cache
+
+#jupiter notebook
+.ipynb
